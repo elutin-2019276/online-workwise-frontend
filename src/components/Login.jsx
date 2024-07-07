@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLogin } from "../shared/hooks/useLogin";
+import { Howl, Howler } from 'howler';
 
 export const Login = () => {
     const { isLoading, login } = useLogin();
@@ -22,6 +23,19 @@ export const Login = () => {
         login(formData);
     };
 
+    useEffect(() => {
+        const sound = new Howl({
+            src: ['/src/assets/water-sound.mp3'],
+            loop: true
+        });
+
+        sound.play();
+
+        return () => {
+            sound.unload();
+        };
+    }, []);
+
     return (
         <>
             <div style={{
@@ -37,10 +51,11 @@ export const Login = () => {
                         display: 'flex',
                         flexDirection: 'row',
                         width: '60%',
-                        backgroundColor: '#3498db',
+                        backgroundColor: '#80FF0000',
                         padding: '20px',
                         borderRadius: '10px',
-                        boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)'
+                        boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+                        border: '2px solid white'
                     }}>
                         <form onSubmit={handleSubmit} className="login-form" style={{ width: '50%', marginRight: '20px' }}>
                             <h2 style={{ color: '#fff', textAlign: 'center', marginBottom: '20px' }}>Login</h2>
