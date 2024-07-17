@@ -1,26 +1,33 @@
+import { RoleBasedRedirect } from "./shared/validators/RoleBasedRedirect";
 import App from "./App";
-//import { ContentRole } from "./Shared/ContentRole";
+import { Authentication } from "./pages/Auth/Authentication";
 import { NotFoundPage } from "./pages/NotFoundPage/NotFoundPage";
-import Layout from "./components/ADMIN/Layout";
+//Roles
 import { ContentRole } from "./shared/validators/ContentRole";
-//import NavbarLayout from "./Components/CLIENT/NavbarLayout";
-
-//import UsersAdmin from "./pages/admin/UserAdmin";
+//Admin
+import { AdminHome } from './pages/admin/AdminHome';
+//Client
+import { HomeClient } from './pages/client/HomeClient';
 
 export const routes = [
-    {
-      path: '/',
-      element: <App />
-    },
-    {
-      path: '/home/*',
-      element: <ContentRole />
-    },
-    {
-      path: '*',
-      element: <NotFoundPage />
-    },
-    //Rutas de cliente (agregar coma despues de not found)
-  
-    //Rutas de admin      
-]
+  {
+    path: '/',
+    element: <App />
+  },
+  {
+    path: '/worwise',
+    element: <RoleBasedRedirect/>
+  },
+  {
+    path: '/worwise/auth',
+    element: <Authentication/>
+  },
+  {
+    path: '/worwise/*',
+    element: <ContentRole/>
+  },
+  {
+    path: '*',
+    element: <NotFoundPage />
+  }
+];

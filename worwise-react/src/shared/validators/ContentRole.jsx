@@ -1,15 +1,16 @@
 import React from 'react';
-import { Navigate, Route, Routes } from 'react-router-dom';
+import { NotFoundPage } from "../../pages/NotFoundPage/NotFoundPage";
+//La importación de los Home
 import { AdminHome } from "../../pages/admin/AdminHome";
 import { HomeClient } from "../../pages/client/HomeClient";
-import { NotFoundPage } from "../../pages/NotFoundPage/NotFoundPage";
+import { Navigate, Route, Routes } from 'react-router-dom';
 
 export const ContentRole = () => {
   const userDetails = localStorage.getItem('user');
   const role = userDetails ? JSON.parse(userDetails).role : null;
 
   if (!role) {
-    return <Navigate to="/pocket_track/auth" />;
+    return <Navigate to="/worwise/auth" />;
   }
 
   return (

@@ -11,11 +11,11 @@ export const RoleBasedRedirect = () => {
 
     useEffect(() => {
         if (role === "ADMIN") {
-            navigate("/pocket_track/admin");
+            navigate("/worwise/admin");
         } else if (role === "CLIENT") {
-            navigate("/pocket_track/client");
+            navigate("/worwise/client");
         } else {
-            navigate("/pocket_track/auth");
+            navigate("/worwise/auth");
         }
     }, [role, navigate]);
 

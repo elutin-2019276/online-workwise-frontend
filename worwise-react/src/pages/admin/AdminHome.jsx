@@ -1,7 +1,8 @@
-import React from 'react';
-
 export const AdminHome = () => {
   return (
-    <div>AdminHome</div>
+      <div>
+          <h1>Admin Home</h1>
+          <p>Welcome, Admin!</p>
+      </div>
   );
 };

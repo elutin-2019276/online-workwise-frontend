@@ -1,34 +1,48 @@
- import { useState } from "react"
-import { loginRequest } from "../../services/api"
-import toast from "react-hot-toast"
-import { useNavigate } from "react-router-dom"
+import { useState } from "react";
+import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
+import { loginRequest } from "../../services/api";
 
-//Hook personalizado que devuelve la función para ir al API
-//y además guarda en un estado si está cargando la información
 export const useLogin = () => {
-    //Constante para redirigir hacia otr página
-    const navigate = useNavigate()
-    //Es verdadero cuando está cargando la información
-    const [isLoading, setisLoading] = useState(false)
+    const [isLoading, setIsLoading] = useState(false);
+    const navigate = useNavigate();
 
-    //Función que consulta al API enviando los datos
-    const login = async (user) => {
-        setisLoading(true)
-        const response = await loginRequest(user)
-        setisLoading(false)
-        if (response.error) {
-            return toast.error(
-                response?.err?.response?.data?.message ||
-                'Error al logearse'
-            )
+    const login = async (username, password) => {
+        setIsLoading(true);
+        const user = { username, password };
+
+        try {
+            const response = await loginRequest(user);
+            setIsLoading(false);
+
+            if (response.error) {
+                toast.error(response.message);
+                return { success: false };
+            }
+
+            const { loggedUser, token, message } = response;
+
+            localStorage.setItem('user', JSON.stringify(loggedUser));
+            localStorage.setItem('token', token);
+
+            toast.success(message);
+
+            if (loggedUser.role === 'Admin') {
+                navigate('/worwise/admin');
+            } else if (loggedUser.role === 'Client') {
+                navigate('/worwise/client');
+            } else {
+                navigate('/worwise');
+            }
+
+            return { success: true };
+
+        } catch (error) {
+            setIsLoading(false);
+            toast.error('Error al logearse');
+            return { success: false };
         }
-        toast.success('Logeado correctamente')
-        localStorage.setItem('token', response.data.token)
-        navigate('/feed/posts')
-    }
+    };
 
-    return {
-        isLoading,
-        login
-    }
-}
+    return { login, isLoading };
+};

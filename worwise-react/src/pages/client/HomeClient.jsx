@@ -1,7 +1,8 @@
-import React from 'react'
-
 export const HomeClient = () => {
   return (
-    <div>HomeClient</div>
-  )
-}
+      <div>
+          <h1>Client Home</h1>
+          <p>Welcome, Client!</p>
+      </div>
+  );
+};
