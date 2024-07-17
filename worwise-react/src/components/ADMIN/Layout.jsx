@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sidebar } from '../Sidebar';
+import { Sidebar } from '../ADMIN/Sidebar';
 import styled from 'styled-components';
 
 const AdminContainer = styled.div`

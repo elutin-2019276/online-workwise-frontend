@@ -29,7 +29,7 @@ export const useLogin = () => {
 
             if (loggedUser.role === 'Admin') {
                 navigate('/worwise/admin');
-            } else if (loggedUser.role === 'Client') {
+            } else if (loggedUser.role === 'Solicitante de empleo') {
                 navigate('/worwise/client');
             } else {
                 navigate('/worwise');

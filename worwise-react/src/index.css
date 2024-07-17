@@ -1,4 +1,6 @@
-body {
+/* index.css o el archivo CSS global */
+html, body {
+  height: 100%;
   margin: 0;
-  padding: 0;
+  overflow-y: auto; /* Asegura que el body permita desplazamiento vertical */
 }
