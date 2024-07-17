@@ -1,0 +1,228 @@
+.form-backgraund-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .form-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+  }
+  
+  .form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  .form-container label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-container input,
+  .form-container textarea,
+  .form-container select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .form-container textarea{
+    min-height: 100px;
+    max-height: 200px;
+    height: 100%;
+  }
+  
+  .form-container button {
+    padding: 10px 15px;
+    background-color: #f32922;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .form-container button:hover {
+    background-color: #fd4538;
+  }
+  
+  .mensaje-error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .modal {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal button {
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .modal button:first-child {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .modal button:last-child {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  /*css listar work offer*/
+  .work-offers-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.work-offers-container h1,
+.work-offers-container h2 {
+    text-align: center;
+    color: #333;
+}
+
+.work-offers-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.work-offers-container li {
+    background: #ffffff;
+    margin: 10px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.work-offers-container li:hover {
+    transform: scale(1.02);
+}
+
+.work-offers-container li h2 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    color: #555;
+}
+
+.work-offers-container li p {
+    margin: 5px 0;
+    color: #777;
+}
+
+.work-offers-container .edit-button,
+.work-offers-container .edit-button__del {
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.work-offers-container .edit-button {
+    background-color: #4CAF50; /* Green */
+}
+
+.work-offers-container .edit-button:hover {
+    background-color: #45a049;
+}
+
+.work-offers-container .edit-button__del {
+    background-color: #f44336; /* Red */
+}
+
+.work-offers-container .edit-button__del:hover {
+    background-color: #da190b;
+}
+
+.edit-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-container input,
+.edit-container textarea,
+.edit-container select {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.edit-container textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.edit-buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.edit-buttons button {
+    margin-left: 10px;
+}
+
+@media (max-width: 600px) {
+    .work-offers-container {
+        padding: 10px;
+    }
+    
+    .edit-container input,
+    .edit-container textarea,
+    .edit-container select {
+        margin: 5px 0;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .edit-buttons button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+/*Fin de los estilos*/
