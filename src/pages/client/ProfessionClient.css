@@ -1,0 +1,75 @@
+.profession-client {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.profession-list {
+  margin-bottom: 30px;
+}
+
+.profession-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.profession-list th,
+.profession-list td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.profession-list th {
+  background-color: #f2f2f2;
+}
+
+.add-profession {
+  margin-bottom: 30px;
+}
+
+.add-profession .form-group {
+  margin-bottom: 10px;
+}
+
+.add-profession label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.add-profession input[type="text"] {
+  width: calc(100% - 16px);
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add-profession button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-profession button:hover {
+  background-color: #45a049;
+}
+
+.selected-profession {
+  margin-bottom: 30px;
+}
+
+.selected-profession p {
+  margin-top: 10px;
+}
+
+.message {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
