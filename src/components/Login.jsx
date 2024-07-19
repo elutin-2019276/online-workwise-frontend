@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useLogin } from "../shared/hooks/useLogin";
 import { Howl, Howler } from 'howler';
+import { HomeClient } from "../pages/client/HomeClient"; 
 
 export const Login = () => {
     const { isLoading, login } = useLogin();
@@ -22,6 +23,8 @@ export const Login = () => {
         e.preventDefault();
         login(formData);
     };
+
+    const isSubmitButtonDisable = !formData.password.isValid
 
     useEffect(() => {
         const sound = new Howl({
@@ -73,8 +76,8 @@ export const Login = () => {
                                 <label className="form-check-label" htmlFor="exampleCheck1" style={{ color: '#fff' }}>¡Recuérdame!</label>
                             </div>
                             <div className="d-flex justify-content-between align-items-center">
-                                <button type="submit" className="btn btn-primary">Login</button>
-                                <a href="#" style={{ color: '#fff' }}>¿Olvidaste tu contraseña?</a>
+                                <a href="HomeClient"> <button className="btn btn-primary" >Login</button></a>
+                                <a href="" style={{ color: '#fff' }}>¿Olvidaste tu contraseña?</a>
                             </div>
                         </form>
                         <div style={{ width: '50%' }}>

@@ -1,6 +1,6 @@
 // src/hooks/useListJobSeekers.js
 import { useState, useEffect } from 'react';
-import { getJobSeekersRequest } from '../services/api.js'
+import { getJobSeekersRequest } from '../../services/api'
 
 const useListJobSeekers = () => {
   const [jobSeekers, setJobSeekers] = useState([]);

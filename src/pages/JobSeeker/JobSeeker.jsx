@@ -1,5 +1,5 @@
 import React from 'react';
-import useRegisterJobSeeker from '../shared/hooks/useJobSeeker';
+import useRegisterJobSeeker from '../../shared/hooks/useJobSeeker';
 
 const RegisterJobSeeker = () => {
   const {

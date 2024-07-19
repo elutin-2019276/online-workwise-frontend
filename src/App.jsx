@@ -1,13 +1,12 @@
-import { AuthPage } from "./pages/AuthPage/AuthPage"
+import React, { useState } from "react";
+import { Authentication } from '../src/pages/Auth/Authentication';
 
 function App() {
-
-  return (
-    <>
-      <AuthPage></AuthPage>
-    </>
-  )
+    return (
+      <>
+         <Authentication />
+      </>
+    );
 }
 
-export default App
-
+export default App;

@@ -1,5 +1,4 @@
 import { useState } from "react"
-import {useLogout as logOut} from "../hooks/useLogout"
 
 
 const getUserDetails = ()=>{

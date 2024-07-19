@@ -1,6 +1,6 @@
 import React from 'react';
-import useListJobSeekers from '../shared/useListJobSeeker.jsx'
-import { deleteJobSeekerRequest } from '../services/api.js';
+import useListJobSeekers from '../../shared/hooks/useListJobSeeker.jsx'
+import { deleteJobSeekerRequest } from '../../services/api.js';
 
 const ListJobSeekers = () => {
     const { jobSeekers, loading, error, reloadJobSeekers } = useListJobSeekers();

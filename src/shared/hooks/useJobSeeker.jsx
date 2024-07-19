@@ -1,6 +1,6 @@
 // src/hooks/useRegisterJobSeeker.js
 import { useState } from 'react';
-import { addJobSeekerRequest } from '../../services/api.js'
+import { addJobSeekerRequest } from '../../services/api'
 
 const useRegisterJobSeeker = () => {
   const [formData, setFormData] = useState({
@@ -44,7 +44,7 @@ const useRegisterJobSeeker = () => {
       alert('Solicitante de empleo registrado exitosamente.');
     } catch (err) {
       if (err.response && err.response.data) {
-        setError(`Error: ${err.response.data.message}`);
+        setError`(Error: ${err.response.data.message})`;
       } else {
         console.error('Error al registrar solicitante de empleo:', err);
         setError('Error al registrar solicitante de empleo.');
